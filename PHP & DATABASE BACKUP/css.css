@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('Robot-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1 {
+font-family:"Roboto";
+text-align:center;
+
+}
+
+h2{
+font-family:"Roboto";
+text-align:center;
+}
+
+img{ 
+	align:"middle";
+}

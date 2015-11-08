@@ -1,0 +1,39 @@
+ 
+
+<?php
+ $email = $_POST['email'];
+ $pass  = $_POST['password'];
+ $servername = "localhost";
+ $username = "caleb";
+ $password = "jeff";
+ $dbname = "mydb";
+ $email = "caleb.kitchen@psu.edu";
+ $pass = "bananaboat";
+ $conn = new mysqli($servername, $username, $password, $dbname);
+
+ $email = mysql_real_escape_string($email);
+ $pass = mysql_real_escape_string($pass);
+
+ $sql = "SELECT Password, Email FROM Student WHERE Email='caleb.kitchen@psu.edu' and Password = 'bananaboat';";
+ //$sql = "SELECT Email FROM Student Where Email='$email';";
+ $result = $conn->query($sql);
+ var_dump($result);
+if(empty($results)){
+echo 'no';
+}else{
+echo 'yes';
+}
+
+
+if(mysql_num_rows($result) > 0){
+  echo '1';
+
+}else{
+  echo '0';
+  $sql ="INSERT INTO Student (Email, Password) VALUES ('$email', '$pass');";
+
+}
+  $result = $conn->query($sql);
+
+?>
+
